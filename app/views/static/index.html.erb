@@ -16,7 +16,17 @@
       <a class="w-nav-brand" href="#"> Undesired </a>
 
 
-      <nav class="w-nav-menu" role="navigation"><a class="nav-link w-nav-link" href="#">Learn More</a><a class="nav-link w-nav-link" href="#">About</a><a class="nav-link w-nav-link" href="#">Sign Up</a><a class="nav-link w-nav-link" href="#">Sign In</a>
+      <nav class="w-nav-menu" role="navigation">
+        <a class="nav-link w-nav-link" href="#">Learn More</a>
+        <a class="nav-link w-nav-link" href="#">About</a>
+        <%= link_to 'Sign Up', new_user_registration_path, class: "nav-link w-nav-link" %>
+        <%= link_to 'Sign In', new_user_session_path, class: "nav-link w-nav-link" %>
+
+      <% if user_signed_in? %>
+        <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, class: "nav-link w-nav-link"  %></li>
+      <% end %> 
+
+
       </nav>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
