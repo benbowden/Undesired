@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'registrations/after_sign_up_path_for'
-
-  get 'static/index'
   get 'static/dashboard'
 
   root 'static#index'

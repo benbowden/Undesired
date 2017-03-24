@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
 		
 		<!-- css source files -->
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 
 
@@ -13,10 +13,13 @@
   </head>
 
   <body>
+    <%= render(:partial => '/layouts/nav')%>
+
     <!-- Flash notices -->
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     
+    <!-- Main content -->
     <%= yield %>
   </body>
 </html>
