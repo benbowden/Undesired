@@ -12,21 +12,18 @@ $div-height-header: 900px;
 
 
 }
-.middle-content{
-	position: relative;
-}
 
 .sign-up-box{
 	text-align: center;
 	background-color: rgba(54,54,53, .6);
   position: absolute;
-  top: 45%;
+  top: 37%;
   left: 50%;
   width: 660px;
   transform: translateX(-50%) translateY(-50%);
   border-radius: 5px;
   color: #DCDDCD;
-  padding: 40px;
+  padding: 37px;
 
 }
 .sign-up-box h1{
@@ -47,5 +44,25 @@ $div-height-header: 900px;
 	margin-top: 10px;
 	background-color: rgba(0,0,0, .1);
 	border-radius: 2px;
+
+}
+
+
+.middle-content{
+	background: url('http://gdurl.com/RWp6');
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 591px;
+  position: relative;
+}
+
+.middle-content h1{
+		font-size: 22px;
+		color: #DCDDCD;
+		text-align: center;
+		text-shadow: 2px 2px #000000;
+		
 
 }
