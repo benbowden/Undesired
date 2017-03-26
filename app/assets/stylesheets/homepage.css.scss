@@ -1,4 +1,4 @@
-$div-height-header: 900px;
+$div-height-header: 150vh;
 
 .header-content{
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('http://gdurl.com/QAPf');
@@ -6,9 +6,12 @@ $div-height-header: 900px;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: $div-height-header;
+  background-repeat: repeat-n;
+  height: unquote("-webkit-calc(100vh + 20px)");
+  width: 100vw;
 
-  margin: -170px;
+
+  margin-top: -170px;
 
 
 }
@@ -17,7 +20,7 @@ $div-height-header: 900px;
 	text-align: center;
 	background-color: rgba(54,54,53, .6);
   position: absolute;
-  top: 37%;
+  top: 43%;
   left: 50%;
   width: 660px;
   transform: translateX(-50%) translateY(-50%);
