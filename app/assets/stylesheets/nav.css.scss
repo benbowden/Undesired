@@ -1,0 +1,47 @@
+.navbar{
+	background-color: rgba(0,0,0, .5);
+	border-color: none;
+	height: 78px;
+
+}
+.navbar-brand{
+	font-size: 22px;
+	position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+//START bootstrap overrides for nav
+.navbar-default{
+	border: none;
+	border-radius: 0px;
+
+}
+.navbar-default .navbar-brand{
+	color: #F15D58
+}
+
+.navbar-nav{
+	color: #F15D58
+}
+
+.navbar-default .navbar-nav > li > a{
+	color: #F15D58;
+
+}
+
+.navbar-collapse{
+	position: relative;
+	top: 50%;
+}
+//need to replace this code to center it
+.navbar-right{
+
+	margin: 12px;
+}
+
+
+
+
+//END bootstrap overrides for nav

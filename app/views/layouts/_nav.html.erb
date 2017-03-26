@@ -14,14 +14,22 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <% if current_page? (root_path) %>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Learn More</a></li>
-          <li><a href="#">About</a></li>    
-          <li><%= link_to 'Sign Up', new_user_registration_path, class: "nav-link w-nav-link" %></li>
+        <ul class="nav navbar-nav navbar-right ">    
+          <li class=><%= link_to 'Sign Up', new_user_registration_path, class: "nav-link w-nav-link" %></li>
           <li><%= link_to 'Sign In', new_user_session_path, class: "nav-link w-nav-link" %></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     <% end %>
+
+    <% if user_signed_in? %>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+          </ul>
+      </div>
+    <% end %>
+
+    
   </div><!-- /.container-fluid -->
 </nav>
 

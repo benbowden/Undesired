@@ -1,0 +1,51 @@
+$div-height-header: 900px;
+
+.header-content{
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('http://gdurl.com/QAPf');
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: $div-height-header;
+
+  margin: -170px;
+
+
+}
+.middle-content{
+	position: relative;
+}
+
+.sign-up-box{
+	text-align: center;
+	background-color: rgba(54,54,53, .6);
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 660px;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 5px;
+  color: #DCDDCD;
+  padding: 40px;
+
+}
+.sign-up-box h1{
+	font-size: 40px;
+}
+.sign-up-box h2{
+	font-size: 22px;
+}
+
+.sign-up-box form input {
+	background-color: rgba(0,0,0, .1);
+	width: 70%;
+	border-radius: 2px;
+	border-color: none;
+	
+}
+.sign-up-box form button {
+	margin-top: 10px;
+	background-color: rgba(0,0,0, .1);
+	border-radius: 2px;
+
+}

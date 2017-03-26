@@ -6,6 +6,8 @@ class StaticController < ApplicationController
   end
 
   def dashboard
+  	@b_isFarmer = current_user.isFarmer
+  	@userTest = current_user
 
   end
 
