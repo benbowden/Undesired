@@ -1,33 +1,28 @@
 
 .containerDash{
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('http://gdurl.com/rAuO1');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-
+  min-height: 128vh;
   width: 100vw;
   margin-top: -300px;
   position: absolute;
   z-index: -1;
-
-
-
-  
 }
 .row{
   margin: auto;
-
 }
 
-.box-of-goods{
+.box-of-produce{
     display: inline-block;
 		background-color: white;
 		width: 400px;
 		height: 400px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+    margin: 10px;
 
     padding: 6px;
 
