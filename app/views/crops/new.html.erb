@@ -1,5 +1,16 @@
-<h1>New Crop</h1>
+<div class="containerFarmer"> </div>
 
-<%= render 'form', crop: @crop %>
+	<div class="container-listings">
+		<div id="header-listings">
+			<b><div id="displayInListing"> New Crop </div></b>
+		</div>
+		<br>
+		
 
-<%= link_to 'Back', static_dashboard_path %>
+		<div class="my-listings">
+				<%= render 'form', crop: @crop %>
+			<%= link_to 'Back', static_dashboard_path %>
+		</div>
+	</div>
+</div>
+

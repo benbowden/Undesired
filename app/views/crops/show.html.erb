@@ -1,19 +1,26 @@
-<p id="notice"><%= notice %></p>
+	
 
-<p>
-  <strong>Name:</strong>
-  <%= @crop.name %>
-</p>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Amount:</strong>
-  <%= @crop.amount %>
-</p>
+<div class="containerFarmer"> </div>
 
-<p>
-  <strong>Cost:</strong>
-  <%= @crop.cost %>
-</p>
+	<div class="container-listings">
+		<div id="header-listings">
+			<b><div id="displayInListing"> <%= @crop.name %> </div></b>
+		</div>
+		<p> </p>
+		<p>
+		  <strong>Amount:</strong>
+		  <%= @crop.amount %>
+		</p>
 
-<%= link_to 'Edit', edit_crop_path(@crop) %> |
-<%= link_to 'Back', static_dashboard_path %>
+		<p>
+		  <strong>Cost:</strong>
+		  <%= @crop.cost %>
+		</p>
+		<div class="my-listings">
+				<%= link_to 'Edit', edit_crop_path(@crop) %> |
+				<%= link_to 'Back', static_dashboard_path %>
+		</div>
+	</div>
+</div>

@@ -11,22 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+    <div class="form-group">
+      <%= f.text_field :name, placeholder: "Name of Crop", class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :amount %>
-    <%= f.text_field :amount %>
-  </div>
+    <div class="form-group">
+      <%= f.text_field :amount, placeholder: "Amount you are selling", class: "form-control"%>
+    </div>
 
-  <div class="field">
-    <%= f.label :cost %>
-    <%= f.text_field :cost %>
-  </div>
+    <div class="form-group">
+      <%= f.text_field :cost, placeholder: "Cost per crop", class: "form-control" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
