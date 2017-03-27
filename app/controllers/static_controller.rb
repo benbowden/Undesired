@@ -14,6 +14,7 @@ class StaticController < ApplicationController
 
 
 
+
   end
 
   private 
