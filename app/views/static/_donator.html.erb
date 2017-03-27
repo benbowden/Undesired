@@ -1,22 +1,21 @@
 
 
 <div class = "containerDash">
-
-
-	
 	<div class="boxes-set-position centered">
 		<% @cropsAll.each_slice(2) do |spliced_crops| %> 
 			<div class="row center-block">	
 				<div class="col-xs-1"></div>
+				<div class="col-xs-1"></div>
+				<div class="col-xs-1"></div>
 
 						<% spliced_crops.each do |f| %>
 	
-							<div class="box-of-produce col-md-5">
-									<h1><%= f.name %> </h1><br>
-									<h3>Amount: <%= f.amount %> </h3><br>
-									<h3>Price per crop: <%= f.cost %> </h3><br>
+							<div class="box-of-produce col-md-3">
+									<h1><%= f.name %> </h1>
+									<h3>Amount: <%= f.amount %> </h3>
+									<h3>Price per crop: <%= f.cost %> </h3>
 									
-									<button type="button" class="btn btn-danger btn-lg" id="btn-inline1"> More About the Farmer</button>
+									<button type="button" class="btn btn-danger btn-lg" id="btn-inline1"> <span id="btn-font-smaller">More About the Farmer</span></button>
 
 									<button type="button" class="btn btn-success btn-lg" id="btn-inline2" data-toggle="modal" data-target="#myModal">Buy</button>
 							</div>
@@ -25,6 +24,8 @@
 				
 					<% end %>
 
+					<div class="col-xs-1"></div>
+					<div class="col-xs-1"></div>
 					<div class="col-xs-1"></div>
 
 			</div>			
