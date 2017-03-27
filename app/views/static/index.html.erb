@@ -5,7 +5,10 @@
 		<h2>Help reduce waste. Buy up typically thrown out produce for people in need. Get tax benefits. Win. Win. </h2>
 		<form>  
 		  <input type="text" name="email" value="Email">
-		  <button type="button"> Get Started as a Donator </button> 
+		  <%= link_to "Get Started as a Donator", new_user_registration_path, style: "color: #fff", id: "my-btn-homepage", class: "btn btn-primary", :method => :get  %>
+		  
+
+
 		</form>
 	</div>
 

@@ -34,9 +34,23 @@ $div-height-header: 150vh;
 
 	.sign-up-box form input {
 		background-color: rgba(0,0,0, .1);
-		width: 70%;
+		width: 60%;
 		border-radius: 2px;
 		border-color: none;
+		padding: 4px;
+
+		.btn-color-white{
+			color: #fff;
+		}
+			
+			a:visited{
+				color: #fff;
+			}
+		
+
+		.btn-right{
+			width: 10%;
+		}
 		
 	}
 	.sign-up-box form button {
@@ -44,10 +58,12 @@ $div-height-header: 150vh;
 		background-color: rgba(0,0,0, .1);
 		border-radius: 2px;
 
+
 	}
 
 
 }
+
 
 
 
