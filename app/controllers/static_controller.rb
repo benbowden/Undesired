@@ -9,6 +9,11 @@ class StaticController < ApplicationController
   	@b_isFarmer = current_user.isFarmer
   	@userTest = current_user
 
+    @cropsFarmer = current_user.crops.all 
+    @cropsAll = Crop.all 
+
+
+
   end
 
   private 

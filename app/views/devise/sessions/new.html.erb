@@ -9,7 +9,7 @@
         <title>MegaMenu Design</title>
     </head>
     <body class="signInPage">
-        <div class="container">
+        <div class="container loginContainer">
         
         <div class="col-sm-8 col-sm-offset-2 main">
         <div class="col-sm-6 left-side">
@@ -20,28 +20,28 @@
         <div class="col-sm-6 right-side">
         <h1>Login</h1>
         
-<!--Form with header-->
-<div class="form">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-group">
-            <%= f.label :email %>
-            <%= f.email_field :email, autofocus: true, class: "form-control", required: false %>
+        <!--Form with header-->
+        <div class="form">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <div class="form-group">
+                    <%= f.label :email %>
+                    <%= f.email_field :email, autofocus: true, class: "form-control", required: false %>
+                </div>
+                <div class="form-group">
+                    <%= f.label :password %>
+                    <%= f.password_field :password, class: "form-control", required: false %>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <%= f.check_box :remember_me, required: false, as: :boolean if devise_mapping.rememberable? %> Remember Me
+                    </label>
+                </div>
+                <div class="text-xs-center">
+                    <%= f.submit "Login", class: "btn btn-deep-purple" %>
+                </div>
+                <%= render "devise/shared/links" %>
+            <% end %>
         </div>
-        <div class="form-group">
-            <%= f.label :password %>
-            <%= f.password_field :password, class: "form-control", required: false %>
-        </div>
-        <div class="checkbox">
-            <label>
-                <%= f.check_box :remember_me, required: false, as: :boolean if devise_mapping.rememberable? %> Remember Me
-            </label>
-        </div>
-        <div class="text-xs-center">
-            <%= f.submit "Login", class: "btn btn-deep-purple" %>
-        </div>
-        <%= render "devise/shared/links" %>
-    <% end %>
-</div>
 <!--/Form with header-->
         </div><!--col-sm-6-->
         </div><!--col-sm-8-->

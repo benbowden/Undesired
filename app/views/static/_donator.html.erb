@@ -1,1 +1,30 @@
-I'm a donator
+
+
+<div class = "containerDash">
+
+
+	
+	<div class="boxes-set-position">
+		<% @cropsAll.each_slice(2) do |spliced_crops| %>
+			<div class="row">
+					<div class="col-md-1"></div>	
+					<div class="col-md-1"></div>
+					<div class="col-md-1"></div>	
+
+						<% spliced_crops.each do |f| %>
+		 					<div class="col-md-3">	
+									<div class="box-of-goods">
+											<h1>Crop: <%= f.name %> </h1><br>
+											<h3>Amount: <%= f.amount %> </h3><br>
+											<h3>Price per crop: <%= f.cost %> </h3><br>
+									</div>
+						</div>
+					<% end %>
+					<div class="col-md-1"></div>	
+					<div class="col-md-1"></div>
+					<div class="col-md-1"></div>		
+			</div>			
+		<% end %>
+	</div>
+</div>
+

@@ -1,1 +1,14 @@
-I'm a farmer
+<div class="container-listings">
+	<%= link_to "Create Listings", new_crop_path %>
+
+	<h1> Your Listings </h1>
+	<div class="my-listings">
+		<% @cropsFarmer.each do |f| %>
+				<h2>Name: <%= f.name %> </h2><br>
+				<h2>Amount: <%= f.amount %> </h2><br>
+				<h2>Price per crop: <%= f.cost %> </h2><br>
+		<% end %>
+
+	</div>
+
+</div>

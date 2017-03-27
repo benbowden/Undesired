@@ -6,22 +6,29 @@
     overflow: hidden !important;
     
 }
+.loginContainer{
+    
+}
 .signInPage{
     background-image: url("http://gdurl.com/lXp1");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-     background-size: cover;
+    background-size: cover;
+    height: unquote("-webkit-calc(100vh + 10px)");
+    width: 100vw;
+    background-repeat: repeat-n;
 
 }
-.main{margin-top:70px;
+.main{
+    margin-top:60px;
 
-padding:0px;
+    padding:0px;
 }
 .fb:focus, .fb:hover{color:FFF !important;}
 body{
-background-color: white;
-font-family: 'Raleway', sans-serif;
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
 .left-side{
@@ -43,8 +50,6 @@ font-family: 'Raleway', sans-serif;
     color: #b1b1b1;
     }
 
-
-    
     .fb{background: #2d6bb7;
     color: #FFF;
     padding: 10px 15px;

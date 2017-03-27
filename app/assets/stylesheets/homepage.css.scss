@@ -13,42 +13,43 @@ $div-height-header: 150vh;
 
   margin-top: -170px;
 
+  .sign-up-box{
+		text-align: center;
+		background-color: rgba(54,54,53, .6);
+		margin: auto;
+		position: relative;
+		top: 30%;
+
+	  border-radius: 5px;
+	  color: #DCDDCD;
+	  padding: 37px;
+	  width: 700px;
+	}
+	.sign-up-box h1{
+		font-size: 40px;
+	}
+	.sign-up-box h2{
+		font-size: 22px;
+	}
+
+	.sign-up-box form input {
+		background-color: rgba(0,0,0, .1);
+		width: 70%;
+		border-radius: 2px;
+		border-color: none;
+		
+	}
+	.sign-up-box form button {
+		margin-top: 10px;
+		background-color: rgba(0,0,0, .1);
+		border-radius: 2px;
+
+	}
+
 
 }
 
-.sign-up-box{
-	text-align: center;
-	background-color: rgba(54,54,53, .6);
-  position: static;
-  top: 43%;
-  left: 50%;
-  width: 660px;
-  transform: translateX(-50%) translateY(-50%);
-  border-radius: 5px;
-  color: #DCDDCD;
-  padding: 37px;
 
-}
-.sign-up-box h1{
-	font-size: 40px;
-}
-.sign-up-box h2{
-	font-size: 22px;
-}
-
-.sign-up-box form input {
-	background-color: rgba(0,0,0, .1);
-	width: 70%;
-	border-radius: 2px;
-	border-color: none;
-	
-}
-.sign-up-box form button {
-	margin-top: 10px;
-	background-color: rgba(0,0,0, .1);
-	border-radius: 2px;
-
-}
 
 
 .middle-content{
