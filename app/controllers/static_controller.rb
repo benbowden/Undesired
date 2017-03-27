@@ -8,9 +8,12 @@ class StaticController < ApplicationController
   def dashboard
   	@b_isFarmer = current_user.isFarmer
   	@userTest = current_user
+    @user = current_user
 
     @cropsFarmer = current_user.crops.all 
     @cropsAll = Crop.all 
+
+
 
 
 
