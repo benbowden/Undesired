@@ -29,12 +29,81 @@
     h2{
       font-size: 22px;
     }
-
-		
-
 	}
   .boxes-set-position{
     margin-top: 300px;
   }
+
+
+  //farmer
+  .containerFarmer{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),  url('http://gdurl.com/kecN');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 128vh;
+  width: 100vw;
+  margin-top: -300px;
+  position: absolute;
+  z-index: -2;
+}
+
+.my-listings{
+  margin: auto;
+}
+.container-listings{
+  margin: auto;
+  background-color: white;
+  width: 40%;
+  color: black;
+  padding: 20px;
+
+  border-radius: 2px;
+  
+
+
+}
+.container-listings h1{
+
+  margin-left: -6px;
+
+}
+
+.listing{
+  border-bottom: 1px solid #ccc
+
+}
+
+.listing-right{
+  padding-right: 5px;
+  display: inline-block;
+
+}
+
+.my-listings h2{
+  font-size: 16px;
+  margin-top: -3px;
+  margin-bottom: -5px;
+}
+
+#displayInListing{
+  display: inline-block;
+  font-size: 27px;
+  margin-left: -5px;
+
+
+}
+#displayInCreateListing{
+  display: inline-block;
+  float: right;
+
+}
+
+#header-listings{
+  border-bottom: 1px solid #ccc;  
+
+}
 
 

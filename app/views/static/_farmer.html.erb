@@ -1,14 +1,26 @@
-<div class="container-listings">
-	<%= link_to "Create Listings", new_crop_path %>
 
-	<h1> Your Listings </h1>
-	<div class="my-listings">
-		<% @cropsFarmer.each do |f| %>
-				<h2>Name: <%= f.name %> </h2><br>
-				<h2>Amount: <%= f.amount %> </h2><br>
-				<h2>Price per crop: <%= f.cost %> </h2><br>
-		<% end %>
+<div class="containerFarmer"> </div>
 
+	<div class="container-listings">
+		<div id="header-listings">
+			<b><div id="displayInListing"> Your Listings </div></b>
+			<%= link_to "Create Listings", new_crop_path, id: "displayInCreateListing" %>
+		</div>
+		<br>
+		
+
+		<div class="my-listings">
+			<% @cropsFarmer.each do |f| %>
+				<div class="listing">
+					<h2>Name: <%= f.name %> </h2><br>
+					<h2>Amount: <%= f.amount %> </h2><br>
+					<h2>Price per crop: <%= f.cost %> </h2><br>
+					<div class="listing-right"><%= link_to 'Show', f %></div>
+        	<div class="listing-right"><%= link_to 'Edit', edit_crop_path(f) %></div>
+					<div class="listing-right"><%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure?' } %></div>					
+				</div>
+
+				<br>
+			<% end %>
+		</div>
 	</div>
-
-</div>

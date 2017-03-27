@@ -28,8 +28,8 @@ class CropsController < ApplicationController
 
     respond_to do |format|
       if @crop.save
-        format.html { redirect_to @crop, notice: 'Crop was successfully created.' }
-        format.json { render :show, status: :created, location: @crop }
+        format.html { redirect_to static_dashboard_path, notice: 'Crop was successfully created.' }
+        format.json { render :show, status: :created, location: static_dashboard_path }
       else
         format.html { render :new }
         format.json { render json: @crop.errors, status: :unprocessable_entity }
@@ -42,7 +42,7 @@ class CropsController < ApplicationController
   def update
     respond_to do |format|
       if @crop.update(crop_params)
-        format.html { redirect_to @crop, notice: 'Crop was successfully updated.' }
+        format.html { redirect_to static_dashboard_path, notice: 'Crop was successfully updated.' }
         format.json { render :show, status: :ok, location: @crop }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class CropsController < ApplicationController
   def destroy
     @crop.destroy
     respond_to do |format|
-      format.html { redirect_to crops_url, notice: 'Crop was successfully destroyed.' }
+      format.html { redirect_to static_dashboard_path, notice: 'Crop was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
