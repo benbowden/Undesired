@@ -1,3 +1,27 @@
 // Place all the styles related to the Crops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.crop-fields{
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url('http://gdurl.com/kecN');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 128vh;
+  width: 100vw;
+  margin-top: -300px;
+  position: absolute;
+  z-index: -2;
+}
+
+.my-fields{
+	 margin: auto;
+  background-color: white;
+  width: 40%;
+  color: black;
+  padding: 20px;
+
+  border-radius: 2px;
+}

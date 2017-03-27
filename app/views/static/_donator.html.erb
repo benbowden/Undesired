@@ -12,16 +12,43 @@
 						<% spliced_crops.each do |f| %>
 	
 							<div class="box-of-produce col-md-5">
-									<h1>Crop: <%= f.name %> </h1><br>
+									<h1><%= f.name %> </h1><br>
 									<h3>Amount: <%= f.amount %> </h3><br>
 									<h3>Price per crop: <%= f.cost %> </h3><br>
+									
+									<button type="button" class="btn btn-danger btn-lg" id="btn-inline1"> More About the Farmer</button>
+
+									<button type="button" class="btn btn-success btn-lg" id="btn-inline2" data-toggle="modal" data-target="#myModal">Buy</button>
 							</div>
+
+					
 				
 					<% end %>
+
 					<div class="col-xs-1"></div>
 
 			</div>			
 		<% end %>
 	</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Success</h4>
+      </div>
+      <div class="modal-body">
+       You've purchased the crop. We'll update you when it's sent to the food bank.
+      </div>
+      <div class="modal-footer">
+     
+        
+      </div>
+    </div>
+  </div>
 </div>
 
