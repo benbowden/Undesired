@@ -24,7 +24,7 @@
     <% if user_signed_in? %>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-              <% if @user.isFarmer? %>
+              <% if current_user.isFarmer? %>
                 <li><%= link_to 'Account', edit_user_registration_path %></li>  
               <% end %>
               
