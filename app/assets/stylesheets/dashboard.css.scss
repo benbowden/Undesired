@@ -1,4 +1,5 @@
 
+
 .containerDash{
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('http://gdurl.com/rAuO1');
   background-attachment: fixed;
@@ -92,6 +93,10 @@
   margin-bottom: -5px;
 }
 
+$font-size-inline: 13px;
+$height-btns-inline: 50px;
+
+
 #btn-inline1{
   display: inline-block;
   position: absolute;
@@ -99,6 +104,9 @@
   left:    0;
   bottom:   0;
   border-radius: 0;
+  font-size: $font-size-inline;
+  height: $height-btns-inline;
+
 
 }
 #btn-inline2{
@@ -108,8 +116,24 @@
   right:    0;
   bottom:   0;
   border-radius: 0;
+  font-size: $font-size-inline;
+  height: $height-btns-inline;
 
 }
+//for stripe, was messing it up
+.btn-inline2{
+  display: inline-block;
+  position: absolute;
+  width: 50%;
+  right:    0;
+  bottom:   0;
+  border-radius: 0;
+  font-size: font-size-inline;
+  height: $height-btns-inline;
+
+
+}
+
 #btn-font-smaller{
   font-size: 15px;
 }

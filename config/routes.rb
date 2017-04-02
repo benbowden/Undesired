@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :produces
   devise_for :users
   resources :users
+  resources :charges #stripe
+
   get 'registrations/after_sign_up_path_for'
   get 'static/dashboard'
 

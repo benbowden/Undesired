@@ -13,6 +13,8 @@ class StaticController < ApplicationController
     @cropsFarmer = current_user.crops.all 
     @cropsAll = Crop.all 
 
+    
+
 
 
 
