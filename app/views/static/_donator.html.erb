@@ -33,7 +33,7 @@
 									<script>
 										var <%= "handler_#{f.id}" %> = StripeCheckout.configure({
 										  key: 'pk_test_M1nfaHjQBuENTABnjwikaHMB',
-										  image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+										  image: 'http://gdurl.com/kCau',
 										  locale: 'auto',
 										  token: function(token) {
 										    // You can access the token ID with `token.id`.
@@ -41,7 +41,7 @@
 
 										    document.getElementById("stripeToken").value = token.id;
 								        document.getElementById("stripeEmail").value = token.email;
-								        document.getElementById("stripeAmount").value = <%= f.total * 50 %>;
+								        document.getElementById("stripeAmount").value = <%= f.total * 100 %>;
 
 
 								        document.getElementById("chargeForm").submit();
@@ -56,8 +56,8 @@
 										  // Open Checkout with further options:
 										  
 										  <%= "handler_#{f.id}" %>.open({
-										    name: 'Demo Site',
-										    description: '2 widgets',
+										    name: 'Undesired',
+										    description: "Your purchase will help people in need!",
 										    amount: <%= f.total * 100 %>
 										  });
 										  e.preventDefault();
@@ -76,29 +76,9 @@
 					<div class="col-xs-1"></div>
 					<div class="col-xs-1"></div>
 					<div class="col-xs-1"></div>
-
 			</div>			
 		<% end %><!-- end cropsAll.each_slice -->
 	</div>
 </div>
 
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Success</h4>
-      </div>
-      <div class="modal-body">
-       You've purchased the crop. We'll update you when it's sent to the food bank.
-      </div>
-      <div class="modal-footer">
-     
-        
-      </div>
-    </div>
-  </div>
-</div>
 
