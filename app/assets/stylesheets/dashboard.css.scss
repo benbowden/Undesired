@@ -96,6 +96,22 @@
 $font-size-inline: 13px;
 $height-btns-inline: 50px;
 
+.btn-inline1{
+  display: inline-block;
+  position: absolute;
+  width: 50%;
+  left:    0;
+  bottom:   0;
+  border-radius: 0;
+  font-size: $font-size-inline;
+  height: $height-btns-inline;
+  color: white;
+  padding-bottom: -10px;
+
+
+
+}
+
 
 #btn-inline1{
   display: inline-block;
@@ -106,6 +122,9 @@ $height-btns-inline: 50px;
   border-radius: 0;
   font-size: $font-size-inline;
   height: $height-btns-inline;
+  color: white;
+  padding-bottom: -10px;
+
 
 
 }

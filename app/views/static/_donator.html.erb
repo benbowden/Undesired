@@ -6,70 +6,62 @@
 			<div class="row center-block">	
 				<div class="col-xs-1"></div>
 				<div class="col-xs-1"></div>
-				<div class="col-xs-1"></div>
-
-				<%= form_tag charges_path, id: 'chargeForm' do %>
+				<div class="col-xs-1"></div>	
 						<% spliced_crops.each do |f| %>
 							<div class="box-of-produce col-md-3">
 									<h1><%= f.name %> </h1>
 									<h3>Amount: <%= f.amount %> </h3>
 									<h3>Price per crop: $<%= f.cost %> </h3>
 									<h3> Total cost: $<%= f.total %> </h3>
-
-									<%= button_to "More About the Farmer", user_path(f.user), method: :get, class: "btn btn-danger btn-lg", id: "btn-inline1" %>
-									
-									<!-- <button type="submit" class="btn btn-success btn-lg" id="btn-inline2">Buy</button> -->
 									
 
-									<script src="https://checkout.stripe.com/checkout.js"></script>
-									<%= hidden_field_tag 'stripeToken' %>
-  								<%= hidden_field_tag 'stripeEmail' %>
-  								<%= hidden_field_tag 'stripeAmount' %>
-  								<%= hidden_field_tag 'cropID' %>
-
-							
-										<button id="<%= "btn_#{f.id}" %>" class="btn btn-success btn-lg btn-inline2"> Buy </button>
 								
+										<%= button_to "More About the Farmer", user_path(f.user), method: :get, type: "button", class: "btn btn-danger btn-lg btn-inline1", method: :get, action: "#{user_path(f.user)}" %>
+									
 
-									<script>
-										var <%= "handler_#{f.id}" %> = StripeCheckout.configure({
-										  key: 'pk_test_M1nfaHjQBuENTABnjwikaHMB',
-										  image: 'http://gdurl.com/kCau',
-										  locale: 'auto',
-										  token: function(token) {
-										    // You can access the token ID with `token.id`.
-										    // Get the token ID to your server-side code for use.
+									
+									<%= form_tag charges_path, id: 'chargeForm' do %>
+										<button id="<%= "btn_#{f.id}" %>" class="btn btn-success btn-lg btn-inline2"> Buy </button>
+									
+										<script src="https://checkout.stripe.com/checkout.js"></script>
+										<%= hidden_field_tag 'stripeToken' %>
+	  								<%= hidden_field_tag 'stripeEmail' %>
+	  								<%= hidden_field_tag 'stripeAmount' %>
+	  								<%= hidden_field_tag 'cropID' %>
 
-										    document.getElementById("stripeToken").value = token.id;
-								        document.getElementById("stripeEmail").value = token.email;
-								        document.getElementById("stripeAmount").value = <%= f.total * 100 %>;
-								        document.getElementById("cropID").value = <%= f.id %>;
+										<script>
+											var <%= "handler_#{f.id}" %> = StripeCheckout.configure({
+											  key: 'pk_test_M1nfaHjQBuENTABnjwikaHMB',
+											  image: 'http://gdurl.com/kCau',
+											  locale: 'auto',
+											  token: function(token) {
+											    // You can access the token ID with `token.id`.
+											    // Get the token ID to your server-side code for use.
 
+											    document.getElementById("stripeToken").value = token.id;
+									        document.getElementById("stripeEmail").value = token.email;
+									        document.getElementById("stripeAmount").value = <%= f.total * 100 %>;
+									        document.getElementById("cropID").value = <%= f.id %>;
+									        document.getElementById("chargeForm").submit();
+											  }
+											});
 
-								        document.getElementById("chargeForm").submit();
+											document.getElementById('<%= "btn_#{f.id}" %>').addEventListener('click', function(e) {
+											  // Open Checkout with further options:
+											  
+											  <%= "handler_#{f.id}" %>.open({
+											    name: 'Undesired',
+											    description: "Your purchase will help people in need!",
+											    amount: <%= f.total * 100 %>
+											  });
+											  e.preventDefault();
+											});
 
-
-								    
-							
-										  }
-										});
-
-										document.getElementById('<%= "btn_#{f.id}" %>').addEventListener('click', function(e) {
-										  // Open Checkout with further options:
-										  
-										  <%= "handler_#{f.id}" %>.open({
-										    name: 'Undesired',
-										    description: "Your purchase will help people in need!",
-										    amount: <%= f.total * 100 %>
-										  });
-										  e.preventDefault();
-										});
-
-										// Close Checkout on page navigation:
-										window.addEventListener('popstate', function() {
-										  handler.close();
-										});
-									</script>
+											// Close Checkout on page navigation:
+											window.addEventListener('popstate', function() {
+											  handler.close();
+											});
+										</script>
 
 							</div><!-- end div under spliced_crops -->
 					<% end %><!-- end spliced_crops -->
