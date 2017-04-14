@@ -12,6 +12,7 @@ def create
 
   amount = params[:stripeAmount]
   getCrop = Crop.find(params[:cropID])
+  test2 = 1
 
   customer = Stripe::Customer.create(
     :email => params[:stripeEmail],
