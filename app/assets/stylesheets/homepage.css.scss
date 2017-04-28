@@ -9648,11 +9648,12 @@ sup {
     margin-bottom: 28px;
     margin-top: 28px;
     text-decoration: none;
+
 }
 
 
 .button_box a {
-    color: #fff;
+    color: white;
     border: 1px solid #fff;
     padding: 17px;
     text-decoration: none;
@@ -9660,6 +9661,11 @@ sup {
 }
 .button_box a:hover{
   text-decoration: none;
+  color: #e8e8e8;
+}
+.button_box a:visted{
+  text-decoration: none;
+  color: white;
 }
 .main_middle img {
     width: 100%;
