@@ -9,7 +9,7 @@
   left: 0px;
   top: 0px;
   display: inline-block;
-  background-image: img-url("vegetables_752153_1920.jpg");
+  background-image: url('../images/vegetables_752153_1920.jpg');
   background-position: 0px 0px;
   background-size: cover;
 }
@@ -21,8 +21,8 @@
   overflow: visible;
   width: 100%;
   height: 100%;
-  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05)), img-url('vegetables_752153_1920.jpg');
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05)), img-url('vegetables_752153_1920.jpg');
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05)), url('../images/vegetables_752153_1920.jpg');
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05)), url('../images/vegetables_752153_1920.jpg');
   background-position: 0px 0px, 116% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -84,7 +84,7 @@
 }
 
 .body {
-  background-image: img-url('vegetables_752153_1920.jpg');
+  background-image: url('../images/vegetables_752153_1920.jpg');
   background-position: 50% 0px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -476,3 +476,6 @@
     padding-left: 0px;
   }
 }
+
+
+

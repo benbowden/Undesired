@@ -22,18 +22,14 @@
     <% end %>
 
     <% if user_signed_in? %>
-      
-          <ul class="nav navbar-nav navbar-right">
-              <% if current_user.isFarmer? %>
-                <li><%= link_to 'Account', edit_user_registration_path %></li>  
-              <% end %>
-              
-              <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li> </li>
-          </ul>
-      
-    <% end %>
-
-    
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user.isFarmer? %>
+            <li><%= link_to 'Account', edit_user_registration_path %></li>  
+          <% end %>
+            
+          <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li> </li>
+        </ul>
+    <% end %> 
   </div><!-- /.container-fluid -->
 </nav>
 

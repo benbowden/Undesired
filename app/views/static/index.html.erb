@@ -1,16 +1,79 @@
-<div class="header-content">
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <title>Undesired</title>
+  </head>
+
+  <body>
+    <!-- Flash notices -->
+    <!-- 
+      <p class="notice"></p>
+      <p class="alert"></p>
+    -->
+    
+    <!-- Main content -->
+    <div class="header-content">
 	
 	<div class="sign-up-box">
 		<h1> 20-30% of produce is thrown out </h1>
 		<h2>Help reduce waste. Buy up typically thrown out produce for people in need. Get tax benefits. Win. Win. </h2>
 		<form>  
 		  <input type="text" name="email" value="Email">
-		  <%= link_to "Get Started as a Donator", new_user_registration_path, style: "color: #fff", id: "my-btn-homepage", class: "btn btn-primary", :method => :get  %>
-		  
-
-
+		  <a style="color: #fff" id="my-btn-homepage" class="btn btn-primary" data-method="get" href="users/sign_up.html">Get Started as a Donator</a>
 		</form>
 	</div>
 
 
 </div>
+<div class="container-fluid bg_main">
+	<div class="container">
+		<div class="tect_mk">
+			<p class="text_mkp">"Reducing food losses by just 15% would be enough to feed more then 25 million Americans every year"</p>
+			<p class="text_mkp rgt">nrde</p>
+		</div>
+	</div>
+	<div class="spacer"></div>
+	<div class="col-md-4 text_box color_a">
+		<h1 class="head_pk">6 billion pounds wasted</h1>
+		<p class="text_mkp small">The amount of produce farmers throw out each year</p>
+	</div>
+	<div class="col-md-4 text_box color_b">
+		<h1 class="head_pk">42.2 million hungry Americans</h1>
+		<p class="text_mkp small">The amount of people living in food insecure households</p>
+	</div>	
+	<div class="col-md-4 text_box color_c">
+		<h1 class="head_pk">3.3 gigatons of CO <sub>2</sub> emitted</h1>
+		<p class="text_mkp small">Food produce two times more CO <sub>2</sub> emission than all of the U.S transortation</p>
+	</div>	
+	<div class="spacer1"></div>
+</div>
+<div class="container-fluid main_middle">
+	<%= image_tag image_url('homepage/image_0.png') %>
+</div>
+<div class="container-fluid main_middle">
+	<%= image_tag image_url('homepage/image1.PNG') %>
+</div>
+<div class="container-fluid main_middle">
+	<%= image_tag image_url('homepage/image4.png') %>
+</div>
+<div class="container-fluid main_footer">
+	<div class="container">
+		<div class="button_box">
+			  <%= link_to 'Get Started as a Donator', new_user_registration_path %>
+		</div>
+	</div>
+</div>
+<div class="container-fluid main_footer1">
+	<div class="container">
+		<div class="footer_box">
+			<li><a href="#">Privacy Policy</a></li>
+			<li><a href="#">Terms of Service</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</div>
+	</div>
+</div>
+</body>
+</html>
