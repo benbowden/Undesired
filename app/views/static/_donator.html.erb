@@ -30,7 +30,7 @@
 
 
 							<%= form_tag charges_path, id: 'chargeForm' do %>
-										<button id="<%= "btn_#{f.id}" %>" class="btn btn-inline2 button-2 w-button"> Buy </button>
+										<button id="<%= "btn_#{f.id}" %>" class="btn btn-success btn-lg btn-inline2 button-2 w-button"> Buy </button>
 									
 										<script src="https://checkout.stripe.com/checkout.js"></script>
 										<%= hidden_field_tag 'stripeToken' %>
