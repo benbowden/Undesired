@@ -85,6 +85,12 @@ html.w-mod-touch * {
   text-decoration: none;
   cursor: pointer;
   border-radius: 0;
+
+}
+
+a.w-button:hover{
+  text-decoration: none;
+  color: #e2e2e2;
 }
 input.w-button {
   -webkit-appearance: button;
