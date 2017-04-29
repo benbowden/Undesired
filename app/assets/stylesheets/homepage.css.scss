@@ -9578,7 +9578,7 @@ button.close {
     -o-background-size: cover;
     background-size: cover;
     background-repeat: repeat-n;
-    height: -webkit-calc(70vh + 100px);
+    
     width: 100vw;
     padding: 0px!important;	
 }
@@ -9600,7 +9600,9 @@ p.text_mkp {
 .text_box {
     padding-left: 0px!important;
     padding-right: 0px!important;
-	    min-height: 98px;
+	   height: 120px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 .color_a{	
 	background-color:rgba(223, 107, 97, 0.63);
@@ -9627,7 +9629,7 @@ sup {
 .spacer {
     width: 100%;
     float: left;
-    height: 138px;
+    height: 90px;
 }
 .spacer1 {
     width: 100%;
