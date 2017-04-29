@@ -1,27 +1,36 @@
 
+<html data-wf-page="5903fd1a1f3e565cffd9be86" data-wf-site="5903fd1a1f3e565cffd9be85">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
 
-<div class = "containerDash">
-	<div class="boxes-set-position centered">
-		<% @cropsAll.each_slice(2) do |spliced_crops| %> 
-			<div class="row center-block">	
-				<div class="col-xs-1"></div>
-				<div class="col-xs-1"></div>
-				<div class="col-xs-1"></div>	
-						<% spliced_crops.each do |f| %>
-							<div class="box-of-produce col-md-3">
-									<h1><%= f.name %> </h1>
-									<h3>Amount: <%= f.amount %> </h3>
-									<h3>Price per crop: $<%= f.cost %> </h3>
-									<h3> Total cost: $<%= f.total %> </h3>
-									
+</head>
 
-								
-										<%= button_to "More About the Farmer", user_path(f.user), method: :get, type: "button", class: "btn btn-danger btn-lg btn-inline1", method: :get, action: "#{user_path(f.user)}" %>
-									
 
-									
-									<%= form_tag charges_path, id: 'chargeForm' do %>
-										<button id="<%= "btn_#{f.id}" %>" class="btn btn-success btn-lg btn-inline2"> Buy </button>
+<body class="body ">
+  <div class="w-container">
+  <% @cropsAll.each_slice(2) do |spliced_crops| %> 
+    <div class="row-4 w-row">
+
+			<% spliced_crops.each do |f| %>
+	      <div class="column-8 w-col w-col-6">
+	        <div class="div-block-3">
+	          <div>
+	            <h1 class="heading-2"><%= f.name %> </h1>
+	          </div>
+	          <div class="div-block-7">
+	            <div class="div-block-4"></div>
+	            <p class="paragraph-5">Amount: <%= f.amount %>
+	              <br>Price per crop: $<%= f.cost %>
+	              <br>Total: $<%= f.total %></p>
+	          </div>
+	          <div class="div-block-5">
+	      
+	          	<a class="button w-button" href="<%=user_path(f.user)%>">Learn About The Farmer</a>
+
+
+							<%= form_tag charges_path, id: 'chargeForm' do %>
+										<button id="<%= "btn_#{f.id}" %>" class="btn btn-inline2 button-2 w-button"> Buy </button>
 									
 										<script src="https://checkout.stripe.com/checkout.js"></script>
 										<%= hidden_field_tag 'stripeToken' %>
@@ -62,17 +71,20 @@
 											  handler.close();
 											});
 										</script>
+	          </div>
+	        </div>
+	      </div>
+	     <% end %> <!-- spliced_crop.each -->
+	<% end %> <!-- cropsAll each_splice -->
+	<% end %>
 
-							</div><!-- end div under spliced_crops -->
-					<% end %><!-- end spliced_crops -->
-				<% end %> <!-- end stripe form_tag -->
+		</div><!-- end row -->
+	</div><!-- end container -->
 
-					<div class="col-xs-1"></div>
-					<div class="col-xs-1"></div>
-					<div class="col-xs-1"></div>
-			</div>			
-		<% end %><!-- end cropsAll.each_slice -->
-	</div>
-</div>
 
+
+
+
+
+</body>
 
