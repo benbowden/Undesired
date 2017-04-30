@@ -6039,7 +6039,7 @@ tbody.collapse.in {
 @media (min-width: 768px) {
   /* line 180, c:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-    margin-left: -15px;
+    margin-left: 0px;
   }
 }
 

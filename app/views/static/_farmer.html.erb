@@ -1,31 +1,46 @@
 
-<div class="containerFarmer"> </div>
 
-	<div class="container-listings">
-		<div id="header-listings">
-			<b><div id="displayInListing"> Your Listings </div></b>
-			<%= link_to "Create Listings", new_crop_path, id: "displayInCreateListing" %>
-		</div>
-		<br>
+<body class="body">
+  <div class="container w-container">
+    <div class="section">
+      <div class="action-needed stats-block">
+        <h1 class="heading-4">Action Needed</h1>
+        <p class="paragraph-6">33</p>
+      </div>
+      <div class="current_balance stats-block">
+        <h1 class="heading-4">Total Crops Shipped</h1>
+        <p class="paragraph-6">10</p>
+      </div>
+      <div class="stats-block total">
+        <h1 class="heading-4">Balance</h1>
+        <p class="paragraph-6">$400,000</p>
+      </div>
+    </div>
+    <div class="div-block-9 w-clearfix">
+      <h4 class="heading-5">Your crops</h4>
+ 			<%= link_to "Create Listing", new_crop_path, id: "displayInCreateListing", class: "link-color" %> 
 
-		<div class="my-listings">
-			<h2> Purchased crops </h2>
 		
-		</div>
+		<% @cropsFarmer.each do |f| %>
 		
 
-		<div class="my-listings">
-			<% @cropsFarmer.each do |f| %>
-				<div class="listing">
-					<h2>Name: <%= f.name %> </h2><br>
-					<h2>Amount: <%= f.amount %> </h2><br>
-					<h2>Price per crop: <%= f.cost %> </h2><br>
-					<div class="listing-right"><%= link_to 'Show', f %></div>
-        	<div class="listing-right"><%= link_to 'Edit', edit_crop_path(f) %></div>
-					<div class="listing-right"><%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure?' } %></div>					
-				</div>
+      <div class="div-block-10"></div>
+      <div class="div-block-17"></div>
+      <p class="paragraph-7"><b><%= f.name %></b>
+        <br>Amount: <%= f.amount %>
+        <br>Cost per lb: $<%= f.cost %></p>
+      <div class="text-block"><%= link_to 'Edit', edit_crop_path(f), class: "link-color" %> &nbsp;&nbsp; &nbsp; <%= link_to 'Delivered', edit_crop_path(f), class: "link-color" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-color" %></div>
+      <div class="div-block-12"></div>
+    
+    <% end %>
+    </div>
+  </div>
 
-				<br>
-			<% end %>
-		</div>
-	</div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
+

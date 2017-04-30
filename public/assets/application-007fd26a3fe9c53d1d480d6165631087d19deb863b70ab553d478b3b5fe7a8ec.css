@@ -5796,12 +5796,7 @@ tbody.collapse.in {
 .navbar-brand > img {
   display: block;
 }
-@media (min-width: 768px) {
-  /* line 180, c:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-    margin-left: -15px;
-  }
-}
+
 
 /* line 193, c:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-toggle {
@@ -5892,7 +5887,7 @@ tbody.collapse.in {
 
 /* line 286, c:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-form {
-  margin-left: -15px;
+
   margin-right: -15px;
   padding: 10px 15px;
   border-top: 1px solid transparent;
