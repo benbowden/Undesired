@@ -29,7 +29,7 @@
       <p class="paragraph-7"><b><%= f.name %></b>
         <br>Amount: <%= f.amount %>
         <br>Cost per lb: $<%= f.cost %></p>
-      <div class="text-block"><%= link_to 'Edit', edit_crop_path(f), class: "link-color" %> &nbsp;&nbsp; &nbsp; <%= link_to 'Delivered', edit_crop_path(f), class: "link-color" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-color" %></div>
+      <div class="text-block"><%= link_to '', edit_crop_path(f), class: "link-color glyphicon glyphicon-pencil" %> &nbsp;&nbsp; &nbsp; <%= link_to '', edit_crop_path(f), class: "link-color glyphicon glyphicon-barcode" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '', f, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-color glyphicon glyphicon-trash" %></div>
       <div class="div-block-12"></div>
     
     <% end %>
