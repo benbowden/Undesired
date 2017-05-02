@@ -10,16 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170326222347) do
+ActiveRecord::Schema.define(version: 20170502015819) do
 
   create_table "crops", force: :cascade do |t|
     t.string   "name"
     t.integer  "amount"
     t.decimal  "cost"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.integer  "user_id"
+    t.boolean  "b_fully_purchased", default: false
+    t.integer  "purchaser_id"
+    t.boolean  "b_delivered"
     t.index ["user_id"], name: "index_crops_on_user_id"
+  end
+
+  create_table "crops_purchased", force: :cascade do |t|
+    t.string  "name"
+    t.integer "amount"
+    t.decimal "cost"
+    t.integer "crops_id"
+    t.index ["crops_id"], name: "index_crops_purchased_on_crops_id"
   end
 
   create_table "users", force: :cascade do |t|

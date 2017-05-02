@@ -11,15 +11,12 @@ class StaticController < ApplicationController
     @user = current_user
 
     @cropsFarmer = current_user.crops.all 
-    @cropsAll = Crop.all 
-
-    
-
+    @cropsAll = Crop.where("b_fully_purchased = ?", false) 
+  end
 
 
-
-
-
+  def orders
+    @cropsOrdered = Crop.where("purchaser_id = ?", current_user.id) 
   end
 
   private 
@@ -27,4 +24,5 @@ class StaticController < ApplicationController
  	def check_signed_in
   	redirect_to static_dashboard_path if signed_in?
 	end
+
 end

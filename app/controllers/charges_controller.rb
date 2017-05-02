@@ -12,6 +12,12 @@ def create
 
   amount = params[:stripeAmount]
 
+  cropPurchased = Crop.find(params[:cropID])
+  cropPurchased.b_fully_purchased = true;
+  cropPurchased.purchaser_id = current_user.id
+  cropPurchased.save
+
+
 
 
   customer = Stripe::Customer.create(
