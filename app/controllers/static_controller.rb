@@ -13,7 +13,7 @@ class StaticController < ApplicationController
     @user = current_user
 
     #donator
-    @cropsAll = Crop.where("b_fully_purchased != ?", true)
+    @cropsAll = Crop.all
 
     #farmer
     @cropsFarmer = current_user.crops.where("b_fully_purchased != ?", true)
