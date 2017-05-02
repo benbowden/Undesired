@@ -54,7 +54,7 @@ class StaticController < ApplicationController
 
 
   def orders
-    @cropsOrdered = Crop.where("purchaser_id = ?", current_user.id) 
+    @cropsOrdered = Crop.where("purchaser_id = ?", current_user.id).order("id DESC") 
   end
 
   private 
