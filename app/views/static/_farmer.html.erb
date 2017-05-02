@@ -5,17 +5,18 @@
     <div class="section">
       <div class="action-needed stats-block">
         <h1 class="heading-4">Action Needed</h1>
-        <p class="paragraph-6">2</p>
+        <p class="paragraph-6"><%= @cropsThatNeedToBeDelivered %></p>
       </div>
       <div class="current_balance stats-block">
         <h1 class="heading-4">Total Crops Shipped</h1>
-        <p class="paragraph-6">26</p>
+        <p class="paragraph-6"><%= @cropsDeliveredCount %></p>
       </div>
       <div class="stats-block total">
         <h1 class="heading-4">Balance</h1>
-        <p class="paragraph-6">$20,520</p>
+        <p class="paragraph-6">$<%= @totalBalance%></p>
       </div>
     </div>
+    <!-- Your Crops Start-->
     <div class="div-block-9 w-clearfix">
       <h4 class="heading-5">Your crops</h4>
  			<%= link_to "Create Listing", new_crop_path, id: "displayInCreateListing", class: "link-color" %> 
@@ -29,11 +30,44 @@
       <p class="paragraph-7"><b><%= f.name %></b>
         <br>Amount: <%= f.amount %>
         <br>Cost per lb: $<%= f.cost %></p>
-      <div class="text-block"><%= link_to '', edit_crop_path(f), class: "link-color glyphicon glyphicon-pencil" %> &nbsp;&nbsp; &nbsp; <%= link_to '', edit_crop_path(f), class: "link-color glyphicon glyphicon-barcode" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '', f, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-color glyphicon glyphicon-trash" %></div>
+      <div class="text-block"><%= link_to '', edit_crop_path(f), class: "link-color glyphicon glyphicon-pencil" %> 
+      <% if f.b_fully_purchased%>
+        &nbsp;&nbsp; &nbsp; 
+        <%= link_to '', edit_crop_path(f), class: "link-color glyphicon glyphicon-barcode" %>
+      <% end %>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '', f, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-color glyphicon glyphicon-trash" %></div>
       <div class="div-block-12"></div>
     
     <% end %>
-    </div>
+    </div> <!-- Your Crops End-->
+
+    <!-- Delivered Start -->
+    <div class="div-block-9 w-clearfix">
+      <h4 class="heading-5">Delivered</h4>
+      
+
+      <div class="div-block-10"></div>
+    <% @cropsDelivered.each do |f| %>
+    
+
+      
+      <div class="div-block-17"></div>
+      <p class="paragraph-7"><b><%= f.name %></b>
+        <br>Amount: <%= f.amount %>
+        <br>Cost per lb: $<%= f.cost %></p>
+      <div class="text-block">
+      <% if f.b_fully_purchased%>
+        &nbsp;&nbsp; &nbsp; 
+        <%= link_to '', edit_crop_path(f), class: "link-color glyphicon glyphicon-barcode" %>
+      <% end %>
+
+      &nbsp;&nbsp;</div>
+      <div class="div-block-12"></div>
+    
+    <% end %>
+    </div> <!-- Shipped End-->
+
   </div>
 
   <br>
