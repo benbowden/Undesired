@@ -10,18 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170502015819) do
+ActiveRecord::Schema.define(version: 20170502040841) do
 
   create_table "crops", force: :cascade do |t|
     t.string   "name"
     t.integer  "amount"
     t.decimal  "cost"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
     t.integer  "user_id"
-    t.boolean  "b_fully_purchased", default: false
+    t.boolean  "b_fully_purchased",  default: false
     t.integer  "purchaser_id"
     t.boolean  "b_delivered"
+    t.string   "link_to_crop_image", default: "http://gdurl.com/M8nY"
     t.index ["user_id"], name: "index_crops_on_user_id"
   end
 

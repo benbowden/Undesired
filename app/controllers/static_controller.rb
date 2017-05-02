@@ -43,6 +43,12 @@ class StaticController < ApplicationController
     end
 
 
+    #######
+    #image to show
+    ######
+    
+
+
 
   end
 

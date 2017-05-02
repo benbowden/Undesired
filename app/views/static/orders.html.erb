@@ -5,14 +5,17 @@
 	  <div class="container-listings">
   	  <div class="my-listings">
 
+		
 				<% @cropsOrdered.each do |f| %>
-					<%= f.name %>
-					<br>
-					Amount: $<%= f.total %>
-					<br>
-					<br>
+						<h2><%= f.name %><h2>
+
+						<br>
+						<h2>Amount: $<%= f.total %></h2>
+						<br>
+						<br>
 
 				<% end %>
+				
 			</div>
 		</div>
 	</div>

@@ -20,13 +20,13 @@
     <div class="div-block-9 w-clearfix">
       <h4 class="heading-5">Your crops</h4>
  			<%= link_to "Create Listing", new_crop_path, id: "displayInCreateListing", class: "link-color" %> 
-
+      
 			<div class="div-block-10"></div>
 		<% @cropsFarmer.each do |f| %>
 		
 
       
-      <div class="div-block-17"></div>
+      <div class="div-block-33" style="background-image: url(<%= f.link_to_crop_image %>)"></div>
       <p class="paragraph-7"><b><%= f.name %></b>
         <br>Amount: <%= f.amount %>
         <br>Cost per lb: $<%= f.cost %></p>
@@ -52,7 +52,7 @@
     
 
       
-      <div class="div-block-17"></div>
+      <div class="div-block-33" style="background-image: url(<%= f.link_to_crop_image %>)"></div>
       <p class="paragraph-7"><b><%= f.name %></b>
         <br>Amount: <%= f.amount %>
         <br>Cost per lb: $<%= f.cost %></p>
