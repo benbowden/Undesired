@@ -2318,6 +2318,8 @@ a:hover, a:focus {
 a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
+  color: #23527c;
+  text-decoration: underline;
 }
 
 /* line 69, c:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_scaffolding.scss */
