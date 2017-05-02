@@ -20,7 +20,7 @@ class StaticController < ApplicationController
 
 
     #calc 
-    @cropsThatNeedToBeDelivered = current_user.crops.where("b_fully_purchased = ?", true).count
+    @cropsThatNeedToBeDelivered = current_user.crops.where("b_fully_purchased = ?", true). where("b_delivered != ?", true).count
     @cropsDelivered = current_user.crops.where("b_delivered = ?", true)
     @cropsDeliveredCount = @cropsDelivered.count
     
