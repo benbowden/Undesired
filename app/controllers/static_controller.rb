@@ -16,13 +16,13 @@ class StaticController < ApplicationController
     @cropsAll = Crop.where("b_fully_purchased = ?", false).order("id DESC")
 
     #farmer
-    @cropsFarmer = current_user.crops.where("b_delivered != ?", true).order("id DESC")
-
+    @cropsActiveFarmer = current_user.crops.where("b_fully_purchased = ?", false).order("id DESC")
+    @cropsPurchased = current_user.crops.where("b_fully_purchased = ?", true).where("b_delivered IS ? OR b_delivered=?", nil, false)
+    @cropsDelivered = current_user.crops.where("b_delivered = ?", true)
 
 
     #calc 
-    @cropsThatNeedToBeDelivered = current_user.crops.where("b_fully_purchased = ?", true). where("b_delivered != ?", true).count
-    @cropsDelivered = current_user.crops.where("b_delivered = ?", true)
+    @cropsThatNeedToBeDelivered = current_user.crops.where("b_fully_purchased = ?", true). where("b_delivered IS ? OR b_delivered=?", nil, false).count
     @cropsDeliveredCount = @cropsDelivered.count
     
     #calc total
