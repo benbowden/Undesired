@@ -37,11 +37,12 @@
   	}
 
 		//user presses enter
-  	$("#emailInput").keyup(function(e) {
-  		alert("hi");
+  	$("#emailInput").keydown(function(e) {
+
   		if(event.keyCode == '13')
   		{
 	      $("#my-btn-homepage")[0].click();
+	      alert("hi");
 	    }
 	    
 
