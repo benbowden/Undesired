@@ -31,7 +31,6 @@
 
 
 		//corrects url to go to based on email input
-		//
   	function setup_email_href_params()
   	{
   		$("#my-btn-homepage").attr("href", "<%=new_user_registration_path %>?email=" + encodeURIComponent($("#emailInput").val()));
@@ -39,6 +38,7 @@
 
 		//user presses enter
   	$("#emailInput").keyup(function(e) {
+  		alert("hi");
   		if(event.keyCode == '13')
   		{
 	      $("#my-btn-homepage")[0].click();
