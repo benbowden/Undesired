@@ -19,10 +19,21 @@
 		<h1> 20-30% of produce is thrown out </h1>
 		<h2>Help reduce waste. Buy up typically thrown out produce for people in need. Get tax benefits. Win. Win. </h2>
 		<form>  
-		  <input type="text" name="email" value="Email">
-		  <a style="color: #fff" id="my-btn-homepage" class="btn btn-primary" data-method="get" href="users/sign_up.html">Get Started as a Donator</a>
+		  <input id="emailInput" type="text" name="email" value="Email">
+		  <%= link_to  "Get Started as a Donator", new_user_registration_path(:email => "ben"), style: "color: #fff; background-color: #337AB7;", id: "my-btn-homepage", class: "btn btn-p" %>
+
 		</form>
 	</div>
+
+		<script>
+
+		$("#my-btn-homepage").click(function() {
+    	$(this).attr("href", "<%=new_user_registration_path %>?email=" + encodeURIComponent($("#emailInput").val()));
+  	});
+
+	</script>
+
+
 
 
 </div>
