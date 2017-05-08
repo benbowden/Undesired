@@ -23,16 +23,29 @@
       <%= f.text_field :cost, placeholder: "Cost per lb", class: "form-control" %>
     </div>
 
-    <div class="form-check">
-      <label class="form-check-label">
-       
-         Delivered: <%= f.check_box  :b_delivered, class: "form-check-input" %>
-      </label>
+    <div class="form-group">
+      <%= f.text_field :destination, placeholder: "Name of food bank", class: "form-control" %>
     </div>
+
+    <div class="form-group">
+      <%= f.text_field :state, placeholder: "State food bank is in", class: "form-control" %>
+    </div>
+
+
 
     <div class="form-group">
       <%= f.text_field :link_to_crop_image, placeholder: "Image of Crop URL", class: "form-control" %>
     </div>
+
+
+    <% if (params[:action] == 'edit') %>
+      <div class="form-check" style="padding-bottom: 10px;">
+        <label class="form-check-label">  
+           Delivered: <%= f.check_box  :b_delivered, class: "form-check-input" %>
+        </label>
+      </div>
+    <% end %>
+
 
 
     

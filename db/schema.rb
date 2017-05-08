@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170502040841) do
+ActiveRecord::Schema.define(version: 20170508151008) do
 
   create_table "crops", force: :cascade do |t|
     t.string   "name"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20170502040841) do
     t.integer  "purchaser_id"
     t.boolean  "b_delivered"
     t.string   "link_to_crop_image", default: "http://gdurl.com/M8nY"
+    t.string   "destination",        default: "Second Harvest"
+    t.string   "state",              default: "NC"
     t.index ["user_id"], name: "index_crops_on_user_id"
   end
 
@@ -49,6 +51,7 @@ ActiveRecord::Schema.define(version: 20170502040841) do
     t.datetime "updated_at",                          null: false
     t.boolean  "isFarmer"
     t.text     "bio"
+    t.string   "farmer_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

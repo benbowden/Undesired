@@ -13,9 +13,15 @@
 
 	 
 	            <div class="div-block-34" style="background-image: url(<%= f.link_to_crop_image %>)"></div>
-	            <p class="paragraph-5">Amount: <%= f.amount %>
+	            <p class="paragraph-5">
+	               
+	    
+	            	Amount: <%= f.amount %> 
 	              <br>Price per lb: $<%= f.cost %>
-	              <br>Total: $<%= f.total %></p>
+	              <br>Total: $<%= f.total %> 
+	            </p>
+	            <br>
+	            <h1 class="farmer-name-crop"> Sold by Farmer <%= f.user.farmer_name %> | Sent to <%= f.destination %> </h1>
 	          </div>
 	          <div class="div-block-5">
 	      
