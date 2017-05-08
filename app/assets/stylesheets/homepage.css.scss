@@ -11,6 +11,15 @@
   position: absolute;
   z-index: -2;
 }
+#my-btn-homepage{
+  color: #fff; 
+  background-color: #337AB7;
+}
+
+#my-btn-homepage:hover{
+  background-color: #3a87c9;
+
+}
 
 /* line 19, c:/Users/BenBowdenE/Desktop/rails/Undesired/app/assets/stylesheets/crops.scss */
 .my-fields {
@@ -9682,7 +9691,7 @@ sup {
 }
 a:hover {
     color: #fff;
-    background-color:transparent!important;
+    
 }
 .main_footer1 {
     width: 100%;
